@@ -1,4 +1,18 @@
 [alias]
+	co = checkout
+	cob = checkout -b
+	cm = commit -m
+	cam = commit -a -m
+	pu = push -u
+	puo = push -u origin
+	pud = push -u deploy
+	a = add .
+	aa = add -A .
+	au = add -u
+	plo = pull origin
+	plom = pull origin master
+	br = branch
+	st = status
 	c = commit -am
 	up = pull
 	p = push

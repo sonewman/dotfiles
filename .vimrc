@@ -1,3 +1,36 @@
+"syntax enable
+ 
+"let g:molokai_original = 1
+set backupdir=~/tmp/vim/
+set nocompatible
+" format
+set autoindent
+set backup
+set nu
+set smartindent
+set showmatch
+set textwidth=80
+set title
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+" syntax
+syntax enable
+" support 256 colors in Lion terminal 
+set t_Co=256
+" files 
+filetype on
+filetype indent on
+filetype plugin on
+" always show file name
+set modeline
+set ls=2
+ 
+"colorscheme hybrid
+colorscheme molokai
+"set background=dark
+
 " Make vim more useful
 set nocompatible
 " Enhance command-line completion
@@ -48,20 +81,20 @@ set noerrorbells
 " Don’t reset cursor to start of line when moving around.
 set nostartofline
 " Show the cursor position
-set ruler
+"set ruler
 " Don’t show the intro message when starting vim
 set shortmess=atI
 " Show the current mode
 set showmode
 " Show the filename in the window titlebar
 set title
-if exists("&relativenumber")
+"if exists("&relativenumber")
   " Use relative line numbers
-  set relativenumber
-  au BufReadPost * set relativenumber
-endif
+"  set relativenumber
+" au BufReadPost * set relativenumber
+"endif
 " Start scrolling three lines before the horizontal window border
-set scrolloff=3
+"set scrolloff=3
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace ()
@@ -71,4 +104,4 @@ function! StripWhitespace ()
 	call setpos('.', save_cursor)
 	call setreg('/', old_query)
 endfunction
-noremap <leader>ss :call StripWhitespace ()<CR>
+"noremap <leader>ss :call StripWhitespace ()<CR>
