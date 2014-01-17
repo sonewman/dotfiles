@@ -21,9 +21,9 @@ syntax enable
 set t_Co=256
 
 " files 
-filetype on
-filetype indent on
-filetype plugin on
+"filetype on
+"filetype indent on
+"filetype plugin on
 
 " always show file name
 set modeline
@@ -113,7 +113,7 @@ set title
 "endif
 
 " Start scrolling three lines before the horizontal window border
-"set scrolloff=3
+set scrolloff=3
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace ()
@@ -124,3 +124,23 @@ function! StripWhitespace ()
 	call setreg('/', old_query)
 endfunction
 "noremap <leader>ss :call StripWhitespace ()<CR>
+
+" required
+filetype off
+
+" set up vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+" My vundles here:
+"
+
+" set up pathogen
+execute pathogen#infect()
+
+
+
+" required
+filetype plugin indent on
